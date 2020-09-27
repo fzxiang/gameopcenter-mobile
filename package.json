@@ -9,16 +9,31 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0-0"
+    "lodash": "^4.17.20",
+    "vant": "^3.0.0-beta.0",
+    "vue": "^3.0.0-0",
+    "vue-class-component": "^8.0.0-0",
+    "vue-router": "^3.4.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "^4.5.6",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0-0",
+    "@vue/eslint-config-typescript": "^5.0.2",
     "babel-eslint": "^10.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0"
+    "eslint-plugin-vue": "^7.0.0-0",
+    "ts-import-plugin": "^1.6.6",
+    "ts-loader": "^8.0.4",
+    "typescript": "~3.9.3",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.12",
+    "webpack-merge": "^5.1.4"
   },
   "eslintConfig": {
     "root": true,
@@ -27,16 +42,20 @@
     },
     "extends": [
       "plugin:vue/vue3-essential",
-      "eslint:recommended"
+      "eslint:recommended",
+      "@vue/typescript"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@typescript-eslint/parser"
     },
     "rules": {}
   },
   "browserslist": [
+    "Android >= 4.0",
+    "iOS >= 7",
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "license": "MIT"
 }
