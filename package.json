@@ -10,9 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
-    "vant": "^3.0.0-beta.0",
+    "vant": "^3.0.0-beta.3",
     "vue": "^3.0.0-0",
-    "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-beta.12"
   },
   "devDependencies": {
@@ -28,6 +27,8 @@
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
     "ts-import-plugin": "^1.6.6",
     "ts-loader": "^8.0.4",
     "typescript": "~3.9.3",
@@ -52,7 +53,7 @@
   },
   "browserslist": [
     "Android >= 4.0",
-    "iOS >= 7",
+    "iOS >= 8.0",
     "> 1%",
     "last 2 versions",
     "not dead"

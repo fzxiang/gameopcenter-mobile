@@ -1,18 +1,29 @@
-import Vue from 'vue'
-import Router, {RouteRecordRaw} from 'vue-router'
-/* Layout */
-import Layout from '@/layout/index.vue'
+import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
 
-Vue.use(Router);
-
-
-export const constantRoutes: RouteRecordRaw[] = [
+const constantRoutes: RouteRecordRaw[] = [
   {
-    path: '/redirect',
-    component: Layout,
-    meta: {hidden: true},
-    children: [
-    ]
+    path: '/',
+    redirect: '/user'
+  },
+  {
+    name: '/user',
+    component: () => {
+      import('@/views/user/index.vue')
+    },
+    path: '/user',
+    meta: {
+      title: '会员中心'
+    }
   }
 ]
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: constantRoutes
+})
+
+
+export default router
+
+
 
