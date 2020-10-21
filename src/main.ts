@@ -1,10 +1,19 @@
 import {createApp} from 'vue'
-import App from '@/App.vue'
-import router from '@/router'
-import Vant from '@/vant/index'
 
+import router, {setupRouter} from '@/router'
+import {setupVant} from '@/setup/vant'
+
+import App from '@/App.vue'
 
 const app = createApp(App)
-app.use(router)
-  .use(Vant)
-  .mount('#app')
+
+// UI
+setupVant(app)
+//Router
+setupRouter(app)
+
+router.isReady().then(()=>{
+  console.log('动态路由渲染完毕')
+  app.mount('#app')
+})
+
