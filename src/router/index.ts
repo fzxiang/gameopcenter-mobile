@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory, RouteRecordRaw, Router} from 'vue-router'
+import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
 
 /* Layout */
 import Layout from '@/layout/index.vue'
@@ -8,16 +8,15 @@ import Layout from '@/layout/index.vue'
 // base routes
 const constantRoutes: RouteRecordRaw[] = [
   {
-    path: '/redirect',
-    component: Layout,
-    redirect: '/loyout',
+    path: '/redirect/:path(.*)*',
+    component: () => import('@/views/redirect/index.vue'),
     meta: { hidden: true },
-    children: [
-      {
-        path: '/redirect/:path(.*)',
-        component: () => import('@/views/redirect/index.vue')
-      }
-    ]
+    // children: [
+    //   {
+    //     path: '/redirect/:path(.*)',
+    //     component: () => import('@/views/redirect/index.vue')
+    //   }
+    // ]
   },
   {
     path: '/login',
