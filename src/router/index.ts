@@ -2,7 +2,7 @@ import type{ App } from 'vue'
 import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
 
 /* Layout */
-import Layout from '@/layout/index.vue'
+import Layout from '@/layouts/logo.vue'
 
 /* Router modules */
 
@@ -25,6 +25,13 @@ const constantRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/dashboard/welcome/index.vue'),
     meta: {
       title: '欢迎页'
+    }
+  },
+  {
+    path: '/home',
+    component: () => import('@/views/home/index.vue'),
+    meta: {
+      title: '首页'
     }
   }
 ]
