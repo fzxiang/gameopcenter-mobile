@@ -13,7 +13,6 @@ setupVant(app)
 setupRouter(app)
 
 router.isReady().then(()=>{
-  console.log('动态路由渲染完毕')
   app.mount('#app')
 })
 

@@ -6,7 +6,7 @@
 <script setup="props" lang="ts">
 
 export default {
-  name: 'login'
+  name: 'Login'
 }
 
 
