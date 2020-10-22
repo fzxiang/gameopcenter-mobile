@@ -1,14 +1,43 @@
 import type {App} from 'vue'
 import {
+  Tab,
+  Tabs,
+
+  Icon,
+
+  Form,
+  List,
+
+  Field,
+  Popup,
+
+  Button,
+  Picker,
   Tabbar,
+  Calendar,
+
   TabbarItem,
-  Button
 } from 'vant'
 
 const vantUIs = [
+  Tab,
+  Tabs,
+
+  Icon,
+
+  Form,
+  List,
+
+  Field,
+  Popup,
+
+  Button,
+  Picker,
   Tabbar,
+  Calendar,
+
+
   TabbarItem,
-  Button
 ]
 
 export function setupVant(app: App<Element>){
