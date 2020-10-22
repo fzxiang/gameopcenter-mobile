@@ -12,18 +12,19 @@ const constantRoutes: RouteRecordRaw[] = [
     path: '/redirect/:path(.*)*',
     component: () => import('@/views/redirect/index.vue'),
     meta: { hidden: true },
-    // children: [
-    //   {
-    //     path: '/redirect/:path(.*)',
-    //     component: () => import('@/views/redirect/index.vue')
-    //   }
-    // ]
   },
   {
     path: '/login',
     component: () => import('@/views/login/index.vue'),
     meta: {
       title: '登录'
+    }
+  },
+  {
+    path: '/welcome',
+    component: () => import('@/views/dashboard/welcome/index.vue'),
+    meta: {
+      title: '欢迎页'
     }
   }
 ]
