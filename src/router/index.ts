@@ -1,13 +1,17 @@
-import type{ App } from 'vue'
-import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
+import type { App } from 'vue';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 /* Layout */
-import Layout from '@/layouts/logo.vue'
+import Layout from '@/layouts/logo.vue';
 
 /* Router modules */
 
 // base routes
 const constantRoutes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    redirect: '/home',
+  },
   {
     path: '/redirect/:path(.*)*',
     component: () => import('@/views/redirect/index.vue'),
@@ -17,37 +21,32 @@ const constantRoutes: RouteRecordRaw[] = [
     path: '/login',
     component: () => import('@/views/login/index.vue'),
     meta: {
-      title: '登录'
-    }
+      title: '登录',
+    },
   },
   {
     path: '/welcome',
     component: () => import('@/views/dashboard/welcome/index.vue'),
     meta: {
-      title: '欢迎页'
-    }
+      title: '欢迎页',
+    },
   },
   {
     path: '/home',
     component: () => import('@/views/home/index.vue'),
     meta: {
-      title: '首页'
-    }
-  }
-]
+      title: '首页',
+    },
+  },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: constantRoutes,
-})
+});
 
-
-export function setupRouter(app: App<Element>){
-  app.use(router)
+export function setupRouter(app: App<Element>) {
+  app.use(router);
 }
 
-export default router
-
-
-
-
+export default router;

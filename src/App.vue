@@ -1,5 +1,7 @@
 <template>
-  <router-view></router-view>
+  <section class="van-doc-demo-section">
+    <router-view />
+  </section>
 </template>
 
 <script lang="ts">

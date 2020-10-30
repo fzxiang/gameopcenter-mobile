@@ -6,6 +6,7 @@ indent_style = space
 indent_size = 2
 end_of_line = lf
 charset = utf-8
+# 去除代码行末的任意空白字符
 trim_trailing_whitespace = true
 insert_final_newline = true
 
