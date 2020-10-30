@@ -1,7 +1,7 @@
 <template>
   <div class="demo-home">
     <h1 class="demo-home__title">
-      <img src="@/assets/svg/logo.svg" alt="This is a logo img"/>
+      <img src="@/assets/images/logo.png" alt="This is a logo img"/>
 <!--      <span>Vant</span>-->
     </h1>
     <h2 class="demo-home__desc">“让生活创造游戏，让游戏回归生活”</h2>
