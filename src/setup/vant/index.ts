@@ -1,6 +1,7 @@
 import type { App } from 'vue';
 import {
   Tab,
+  Cell,
   Tabs,
   Icon,
   Form,
@@ -11,23 +12,24 @@ import {
   Picker,
   Tabbar,
   Calendar,
+  CellGroup,
   TabbarItem,
 } from 'vant';
 
 const vantUIs = [
   Tab,
-
+  Cell,
   Tabs,
   Icon,
   Form,
   List,
-
   Field,
   Popup,
   Button,
   Picker,
   Tabbar,
   Calendar,
+  CellGroup,
   TabbarItem,
 ];
 
